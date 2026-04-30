@@ -1,0 +1,50 @@
+version: 2
+
+sources:
+  - name: gz_raw_data
+
+    tables:
+
+      - name: raw_gz_product
+        columns:
+          - name: products_id
+            description: XXX
+            tests:
+              - unique
+              - not_null
+          - name: purchase_price
+            description: XXX
+
+      - name: raw_gz_sales
+        description: sales of Greenweez / we have one row per product_id found in each orders_id
+        columns:
+          - name: date_date
+            description: date of purchase
+
+          - name: orders_id
+            description: XXX
+
+          - name: products_id
+            description: XXX
+
+          - name: revenue
+            description: XXX
+
+          - name: quantity
+            description: XXX
+
+
+
+      - name: raw_gz_ship
+        columns:
+          - name: orders_id
+            description: XXX
+            tests:
+              - unique
+              - not_null
+          - name: shipping_fee
+            description: XXX
+          - name: log_cost
+            description: XXX
+          - name: ship_cost
+            description: XXX
