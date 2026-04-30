@@ -50,9 +50,41 @@ sources:
             description: XXX
       - name: adwords
         identifier: raw_gz_adwords
+        columns:
+          - name: date_date
+          - name: campaign_name
+        tests:
+        - unique:
+            column_name: "(date_date || '-' ||campaign_key)"
+        - not_null:
+            column_name: "(date_date || '-' ||campaign_key)"
       - name: facebook
         identifier: raw_gz_facebook
+        columns:
+          - name: date_date
+          - name: campaign_name
+        tests:
+        - unique:
+            column_name: "(date_date || '-' ||campaign_key)"
+        - not_null:
+            column_name: "(date_date || '-' ||campaign_key)"
       - name: criteo
         identifier: raw_gz_criteo
+        columns:
+          - name: date_date
+          - name: campaign_name
+        tests:
+        - unique:
+            column_name: "(date_date || '-' ||campaign_key)"
+        - not_null:
+            column_name: "(date_date || '-' ||campaign_key)"
       - name: bing
         identifier: raw_gz_bing
+        columns:
+          - name: date_date
+          - name: campaign_name
+        tests:
+        - unique:
+            column_name: "(date_date || '-' ||campaign_key)"
+        - not_null:
+            column_name: "(date_date || '-' ||campaign_key)"
