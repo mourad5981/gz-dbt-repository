@@ -1,4 +1,3 @@
-{{ config(materialized='table') }}
 SELECT
 date_date,
 COUNT (orders_id) AS total_number_of_transactions,
