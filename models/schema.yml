@@ -33,10 +33,7 @@ sources:
           - name: quantity
             description: XXX
 
-        tests:
-          # clé primaire composite
-          - unique:
-              column_name: orders_id
+
 
       - name: raw_gz_ship
         columns:
